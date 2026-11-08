@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulário de Cadastro</h1>
+    <form action="">
+        <fieldset class="pessoal">
+            <legend>Dados Pessoais</legend>
+            <div class="row">
+                <label for="name">Nome:</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="row">
+                <label for="cargo">Cargo:</label>
+                <select name="cargo" id="cargo">
+                    <option value="">Selecione</option>
+                    <option value="diretor">Diretor</option>
+                    <option value="gerente">Gerente</option>
+                    <option value="coordenador">Coordenador</option>
+                    <option value="funcionario">Analista de Sistemas</option>
+                    <option value="supervisor">Analista de Suporte Jr.</option>
+                    <option value="estagiario">Estagiário</option>
+                </select>
+            </div>
+            <div class="row">
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="row">
+                <label for="idade">Idade:</label>
+                <input type="number" name="idade" id="idade">
+            </div>
+        </fieldset>
+        <fieldset class="endereco">
+            <legend>Endereço</legend>
+            <div class="row">
+                <label for="endereco">Endereço:</label>
+                <input type="text" name="endereco" id="endereco">
+            </div>
+            <div class="row">
+                <label for="endereco-numero">Número:</label>
+                <input type="number" name="endereco-numero" id="endereco-numero">
+            </div>
+            <div class="row">
+                <label for="cidade">Cidade:</label>
+                <input type="text" name="cidade" id="cidade">
+            </div>
+            <div class="row">
+                <label for="bairro">Bairro:</label>
+                <input type="text" name="bairro" id="bairro">
+            </div>
+        </fieldset>
+    </form>
+
+</body>
+</html>
