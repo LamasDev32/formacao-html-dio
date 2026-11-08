@@ -1,61 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <meta name="theme-color" content="#f4f6fb">
+    <title>Cadastro | Formulário</title>
 </head>
 <body>
-    <h1>Formulário de Cadastro</h1>
-    <form action="">
-        <fieldset class="pessoal">
-            <legend>Dados Pessoais</legend>
-            <div class="row">
-                <label for="name">Nome:</label>
-                <input type="text" name="name" id="name">
-            </div>
-            <div class="row">
-                <label for="cargo">Cargo:</label>
-                <select name="cargo" id="cargo">
-                    <option value="">Selecione</option>
-                    <option value="diretor">Diretor</option>
-                    <option value="gerente">Gerente</option>
-                    <option value="coordenador">Coordenador</option>
-                    <option value="funcionario">Analista de Sistemas</option>
-                    <option value="supervisor">Analista de Suporte Jr.</option>
-                    <option value="estagiario">Estagiário</option>
-                </select>
-            </div>
-            <div class="row">
-                <label for="email">E-mail:</label>
-                <input type="email" name="email" id="email">
-            </div>
-            <div class="row">
-                <label for="idade">Idade:</label>
-                <input type="number" name="idade" id="idade">
-            </div>
-        </fieldset>
-        <fieldset class="endereco">
-            <legend>Endereço</legend>
-            <div class="row">
-                <label for="endereco">Endereço:</label>
-                <input type="text" name="endereco" id="endereco">
-            </div>
-            <div class="row">
-                <label for="endereco-numero">Número:</label>
-                <input type="number" name="endereco-numero" id="endereco-numero">
-            </div>
-            <div class="row">
-                <label for="cidade">Cidade:</label>
-                <input type="text" name="cidade" id="cidade">
-            </div>
-            <div class="row">
-                <label for="bairro">Bairro:</label>
-                <input type="text" name="bairro" id="bairro">
-            </div>
-        </fieldset>
-    </form>
+    <main class="page">
+        <section class="form-card" aria-labelledby="page-title">
+            <header class="form-header">
+                <span class="eyebrow">SEUS DADOS, EM UM SÓ LUGAR</span>
+                <h1 id="page-title">Formulário de cadastro</h1>
+                <p>Preencha as informações abaixo para criar seu cadastro.</p>
+            </header>
 
+            <form action="">
+                <fieldset class="form-section">
+                    <legend><span class="section-number">01</span> Dados pessoais</legend>
+                    <div class="fields-grid">
+                        <div class="field">
+                            <label for="name">Nome</label>
+                            <input type="text" name="name" id="name" placeholder="Como podemos te chamar?">
+                        </div>
+                        <div class="field">
+                            <label for="cargo">Cargo</label>
+                            <select name="cargo" id="cargo">
+                                <option value="">Selecione seu cargo</option>
+                                <option value="diretor">Diretor</option>
+                                <option value="gerente">Gerente</option>
+                                <option value="coordenador">Coordenador</option>
+                                <option value="funcionario">Analista de Sistemas</option>
+                                <option value="supervisor">Analista de Suporte Jr.</option>
+                                <option value="estagiario">Estagiário</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="email">E-mail</label>
+                            <input type="email" name="email" id="email" placeholder="voce@exemplo.com">
+                        </div>
+                        <div class="field">
+                            <label for="idade">Idade</label>
+                            <input type="number" name="idade" id="idade" placeholder="Ex.: 28">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-section">
+                    <legend><span class="section-number">02</span> Endereço</legend>
+                    <div class="fields-grid">
+                        <div class="field field-wide">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" name="endereco" id="endereco" placeholder="Rua, avenida...">
+                        </div>
+                        <div class="field">
+                            <label for="endereco-numero">Número</label>
+                            <input type="number" name="endereco-numero" id="endereco-numero" placeholder="Nº">
+                        </div>
+                        <div class="field">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" name="cidade" id="cidade" placeholder="Sua cidade">
+                        </div>
+                        <div class="field field-wide">
+                            <label for="bairro">Bairro</label>
+                            <input type="text" name="bairro" id="bairro" placeholder="Seu bairro">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="form-footer">
+                    <span>Revise seus dados antes de continuar.</span>
+                    <button type="submit">Finalizar cadastro <span aria-hidden="true">→</span></button>
+                </div>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
