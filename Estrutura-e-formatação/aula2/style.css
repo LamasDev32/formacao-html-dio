@@ -13,36 +13,39 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #c5c3c3b9;
+    background-image: url('https://freerangestock.com/_next/image?url=%2Fimages%2Fsample%2F130073%2F1867038.jpg&w=3840&q=75');
 }
 
 .card1 {
     margin-right: 20px;
     width: 400px;
     height: 500px;
-    background-color: #eceaeadc;
+    background-color: #01570ddc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    color: #ccc;
 }
 
 .card2 {
     margin-right: 20px;
     width: 400px;
     height: 500px;
-    background-color: #8bc2d8;
+    background-color: #8bc2d8b7;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    color: #fff;
 }
 
 .card3 {
     width: 400px;
     height: 500px;
-    background-color: #c06f6f;
+    background-color: #c06f6fb4;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    color: #fff;
 }
 
 .card1 h2, .card2 h2, .card3 h2 {
