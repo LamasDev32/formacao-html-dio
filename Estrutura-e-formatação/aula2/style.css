@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c5c3c3b9;
+}
+
+.card1 {
+    margin-right: 20px;
+    width: 400px;
+    height: 500px;
+    background-color: #eceaeadc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card2 {
+    margin-right: 20px;
+    width: 400px;
+    height: 500px;
+    background-color: #8bc2d8;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card3 {
+    width: 400px;
+    height: 500px;
+    background-color: #c06f6f;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card1 h2, .card2 h2, .card3 h2 {
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+}
+
+.card1 p, .card2 p, .card3 p {
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.card1 img, .card2 img, .card3 img {
+    margin-top: 20px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
