@@ -1,74 +1,46 @@
-# Trilha HTML - Dio.me
-## Módulo 02 - HTML I - Conceitos Básicos
+# Clínica VivaBem
 
-Este desafio tem como objetivo, criar um site "quase" completo, com tudo o que vimos neste módulo. Os temas que deverão ser abordados são:
-- Formulários
-- Estruturação e formatação de texto
-- Mídias
-- Tabelas
+Site estático de uma clínica médica fictícia, criado como desafio do Módulo 2 da trilha de HTML da DIO. O projeto demonstra estruturação de páginas com HTML e apresentação visual com CSS.
 
-Além de outros recursos falados nas aulas!
+## Páginas
 
-## Instruções
-1. Você deve criar um site de uma clínica médica (você escolhe a especialidade)
-2. Este site deve conter o seguinte menu de navegação:
-    - Página Principal
-    - Sobre a clínica
-    - Horário de Atendimento
-    - Contato
-3. Deve, obrigatoriamente, utilizar todas os assuntos abordados nas aulas.
+- **Página Principal** — apresentação da clínica e links para os serviços.
+- **Sobre a clínica** — história, equipe e proposta de atendimento.
+- **Horário de Atendimento** — tabela de horários por especialidade e dia.
+- **Contato** — telefones, endereço, mapa do Google Maps e formulário demonstrativo.
 
-Abaixo como cada página deve ser criada e estruturada.
+## Tecnologias e recursos
 
-### Estrutura das páginas
+- HTML semântico, com navegação entre páginas.
+- CSS responsivo para telas menores.
+- Tabela acessível com cabeçalhos de linha e coluna.
+- Formulário com campos obrigatórios, validação básica do navegador e botão para limpar.
+- Ilustrações SVG locais e mapa incorporado.
 
-Todas as páginas terão que seguir um padrão pré-definido. Como não aprendemos sobre CSS ainda, utilize o arquivo `template.html` para utilizar como base. Ele segue uma estrutura semelhante a image abaixo.
+## Como visualizar
 
-![Estrutura](https://i.stack.imgur.com/9jI6f.gif)
+Abra `index.html` em um navegador. Para executar por um servidor local, inicie-o na pasta `desafio-modulo-2` e acesse a página inicial. Não é necessário instalar dependências nem realizar build.
 
-\* _No template tem algumas cores mas é apenas para melhor visualização. Fique a vontade para alterar da melhor forma._
+## Estrutura
 
-No **Menu**, ficará localizado o menu de navegação (ah vá!), no **Header** de cada página ficará uma imagem, no **Footer** informações de contato, e o **Content** é o conteúdo de cada página.
-### Página Principal
-1. Deve ter uma imagem no **Header**.
-2. Em **Content** uma breve descrição sobre a clínica.
-3. **Menu** e **Footer** padrões em todas as páginas.
+```text
+desafio-modulo-2/
+├── index.html
+├── README.md
+└── assets/
+    ├── css/
+    │   └── base.css
+    ├── images/
+    │   ├── contato.svg
+    │   ├── horarios.svg
+    │   ├── principal.svg
+    │   └── sobre.svg
+    └── pages/
+        ├── contato.html
+        ├── horarios.html
+        └── sobre.html
+```
 
-### Sobre a clínica
-1. Deve ter uma imagem diferente no **Header**.
-2. Em **Content** um texto falando sobre a clínica.
-3. **Menu** e **Footer** padrões em todas as páginas.
+## Observação sobre o formulário
 
-### Horário de Atendimento
-1. Deve ter uma imagem diferente no **Header**.
-2. Em **Content** um pequeno texto falando sobre os serviços, e uma tabela de preços, onde cada linha é um serviço, com o preço de cada um de acordo com os dias da semana.
-
-|Serviços |Segunda a Sexta | Sábados | Feriados |
-|---|---|---|---|
-|Clínica geral | 08h - 19h  | 08h - 14h | 08h - 14h  |
-|Psicologia | 08h - 19h  | 08h - 14h | 08h - 14h  |
-|Pediatria | 08h - 19h  | 08h - 18h | - |
-|Oftalmologia | 08h - 19h  | 08h - 18h | - |
-|||||
-
-3. **Menu** e **Footer** padrões em todas as páginas.
-
-
-### Contato
-1. Deve ter uma imagem diferente no **Header**.
-2. Em **Content** deve ter:
-    - Os telefones de contato (celular e whatsapp)
-    - Endereço completo da clínica
-    - Um Iframe com o Google Maps apontando o endereço da clínica
-    - Um formulário de contato com:
-        - Nome (type="text")
-        - E-mail (type="email")
-        - Assunto (type="text")
-        - Mensagem (textarea)
-        - Botões de envias e limpar formulário
-
-3. **Menu** e **Footer** padrões em todas as páginas.
-
-Desafio está lançado! Com tudo que aprendemos no Módulo II é perfeitamente possível criar este site! 
-
-Bora pra cima!
+O formulário é apenas demonstrativo. Para receber mensagens, configure um endereço de e-mail válido no atributo `action` ou integre um serviço de envio de formulários. Os dados fictícios de contato e localização também devem ser substituídos antes de qualquer uso real.
