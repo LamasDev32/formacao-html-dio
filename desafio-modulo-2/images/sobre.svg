@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 460" role="img" aria-labelledby="title">
+  <title id="title">Equipe de profissionais de saúde</title>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#155b69"/><stop offset="1" stop-color="#7bc9b7"/></linearGradient>
+  </defs>
+  <rect width="1600" height="460" fill="url(#bg)"/>
+  <circle cx="1310" cy="230" r="240" fill="#fff" opacity=".12"/>
+  <path d="M0 390q270-150 540 0t540 0 520 0v70H0z" fill="#0c4652" opacity=".35"/>
+  <g transform="translate(1010 94)">
+    <circle cx="90" cy="66" r="48" fill="#f3c9a6"/><path d="M43 62q4-58 50-54 42 4 48 52-28-25-98 2" fill="#24434a"/>
+    <path d="M17 244q2-115 73-115t73 115" fill="#fff"/>
+    <circle cx="220" cy="82" r="42" fill="#d99d7b"/><path d="M178 78q4-49 45-46 39 3 43 47-31-19-88-1" fill="#392f35"/>
+    <path d="M157 244q2-100 64-100t64 100" fill="#e9b65b"/>
+    <path d="M83 146h15v48H83zm-17 16h49v15H66z" fill="#e68164"/>
+  </g>
+</svg>

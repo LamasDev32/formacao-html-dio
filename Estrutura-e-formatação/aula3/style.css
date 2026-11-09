@@ -1,0 +1,23 @@
+table {
+    box-shadow: 5px 5px 15px 5px #000000da;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #d1d1d1;
+}
+
+thead {
+    background-color: #0b298bee;
+    color: white;
+}
+
+tfoot {
+    background-color: #0b298bee;
+    color: white;
+}

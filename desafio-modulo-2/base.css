@@ -1,0 +1,283 @@
+:root {
+    color-scheme: light;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #17333b;
+    background: #f3f8f8;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+}
+
+a {
+    color: #087f82;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #e6a544;
+    outline-offset: 3px;
+}
+
+.wrapper {
+    display: flex;
+    width: min(1200px, 100%);
+    min-height: 100vh;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 0 36px rgb(23 51 59 / 8%);
+}
+
+.menu {
+    flex: 0 0 230px;
+    padding: 32px 22px;
+    background: #e7f3f2;
+}
+
+.brand {
+    display: block;
+    margin: 0 0 34px;
+    color: #087f82;
+    font-size: 1.35rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.menu ul {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu a:not(.brand) {
+    display: block;
+    padding: 12px;
+    border-radius: 8px;
+    color: #24434a;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.menu a:not(.brand):hover,
+.menu a[aria-current="page"] {
+    background: #087f82;
+    color: #fff;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+}
+
+.header {
+    position: relative;
+    min-height: 230px;
+    overflow: hidden;
+    background: #c9eeea;
+}
+
+.header img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.header h1 {
+    position: absolute;
+    right: 24px;
+    bottom: 20px;
+    left: 24px;
+    max-width: 620px;
+    margin: 0;
+    color: #fff;
+    font-size: clamp(1.7rem, 4vw, 2.7rem);
+    text-shadow: 0 2px 12px rgb(9 50 55 / 55%);
+}
+
+.content {
+    flex: 1;
+    padding: 32px clamp(20px, 5vw, 52px);
+    line-height: 1.7;
+}
+
+.content h2 {
+    margin-top: 0;
+    color: #087f82;
+}
+
+.content h3 {
+    color: #24535a;
+}
+
+.highlight {
+    padding: 18px 22px;
+    border-left: 4px solid #e6a544;
+    border-radius: 0 8px 8px 0;
+    background: #fff8eb;
+}
+
+.services-table {
+    width: 100%;
+    margin: 24px 0;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.services-table caption {
+    margin-bottom: 12px;
+    color: #24535a;
+    font-weight: 700;
+    text-align: left;
+}
+
+.services-table th,
+.services-table td {
+    padding: 13px 15px;
+    border: 1px solid #d5e5e4;
+}
+
+.services-table thead {
+    background: #087f82;
+    color: #fff;
+}
+
+.services-table tbody tr:nth-child(even) {
+    background: #f3f8f8;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    margin: 20px 0 32px;
+}
+
+.contact-details p {
+    margin: 8px 0;
+}
+
+.map {
+    width: 100%;
+    min-height: 260px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.contact-form {
+    display: grid;
+    gap: 14px;
+    max-width: 680px;
+}
+
+.contact-form label {
+    display: grid;
+    gap: 6px;
+    font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #b8cecc;
+    border-radius: 6px;
+    color: inherit;
+    font: inherit;
+}
+
+.contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.form-actions button {
+    padding: 11px 18px;
+    border: 0;
+    border-radius: 6px;
+    background: #087f82;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
+.form-actions button[type="reset"] {
+    background: #e7f3f2;
+    color: #24434a;
+}
+
+.footer {
+    padding: 22px clamp(20px, 5vw, 52px);
+    background: #173f46;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.footer p {
+    margin: 4px 0;
+}
+
+.footer a {
+    color: #bcebe5;
+}
+
+@media (max-width: 720px) {
+    .wrapper {
+        display: block;
+    }
+
+    .menu {
+        padding: 16px 18px;
+    }
+
+    .brand {
+        margin: 0 0 12px;
+    }
+
+    .menu ul {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .menu a:not(.brand) {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .header,
+    .header img {
+        min-height: 190px;
+        height: 190px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-table {
+        font-size: 0.9rem;
+    }
+
+    .services-table th,
+    .services-table td {
+        padding: 9px 7px;
+    }
+}
