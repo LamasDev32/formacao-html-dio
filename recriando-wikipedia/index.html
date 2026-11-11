@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recriação para estudo de estrutura HTML e CSS da página da Wikipédia sobre Dragon Ball Z.">
+    <title>Dragon Ball Z – Wikipédia, a enciclopédia livre</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========================================================
+         1. CABEÇALHO SUPERIOR (WIKIPEDIA HEADER)
+         Contém o logotipo, a barra de pesquisa e as ações de usuário
+         ======================================================== -->
+    <header class="wiki-header">
+        <div class="header-left">
+            <button class="nav-toggle" aria-label="Abrir menu principal">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="#" class="wiki-brand">
+                <!-- Logotipo estilizado da Wikipédia em SVG -->
+                <svg class="wiki-logo-icon" viewBox="0 0 100 100" width="34" height="34" aria-hidden="true">
+                    <circle cx="50" cy="50" r="46" fill="#f8f9fa" stroke="#a2a9b1" stroke-width="4" />
+                    <text x="50" y="65" font-family="'Linux Libertine', Georgia, serif" font-size="52" text-anchor="middle" font-weight="bold" fill="#202122">W</text>
+                </svg>
+                <div class="wiki-brand-text">
+                    <span class="brand-title">WIKIPÉDIA</span>
+                    <span class="brand-subtitle">A enciclopédia livre</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="header-center">
+            <form class="search-form" action="#" method="get" role="search">
+                <div class="search-input-wrapper">
+                    <span class="search-icon" aria-hidden="true">🔍</span>
+                    <input type="search" name="search" placeholder="Pesquisar na Wikipédia" aria-label="Pesquisar na Wikipédia">
+                </div>
+                <button type="submit" class="search-button">Pesquisar</button>
+            </form>
+        </div>
+
+        <div class="header-right">
+            <nav class="user-tools" aria-label="Ferramentas de usuário">
+                <a href="#criar-conta" class="user-link">Criar uma conta</a>
+                <a href="#entrar" class="user-link">Entrar</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========================================================
+         2. ABAS DE NAVEGAÇÃO SUPERIOR DO ARTIGO
+         (Espaço nominal: Artigo, Discussão, Ler, Editar, Histórico)
+         ======================================================== -->
+    <div class="page-top-bar">
+        <nav class="article-namespaces" aria-label="Abas de conteúdo">
+            <a href="#artigo" class="tab-link active">Artigo</a>
+            <a href="#discussao" class="tab-link">Discussão</a>
+        </nav>
+        <nav class="article-actions" aria-label="Ações da página">
+            <a href="#ler" class="tab-link active">Ler</a>
+            <a href="#editar" class="tab-link">Editar</a>
+            <a href="#ver-historico" class="tab-link">Ver histórico</a>
+            <span class="action-tools">
+                <a href="#ferramentas" class="tab-link">Ferramentas ▾</a>
+            </span>
+        </nav>
+    </div>
+
+    <!-- ========================================================
+         3. ESTRUTURA PRINCIPAL (LAYOUT: SIDEBAR + CONTEÚDO)
+         ======================================================== -->
+    <div class="wiki-layout">
+
+        <!-- ====================================================
+             3.1 BARRA LATERAL ESQUERDA (SIDEBAR DE NAVEGAÇÃO)
+             ==================================================== -->
+        <aside class="wiki-sidebar" aria-label="Navegação do site">
+            <div class="sidebar-block">
+                <h3 class="sidebar-title">Navegação</h3>
+                <ul class="sidebar-list">
+                    <li><a href="#">Página principal</a></li>
+                    <li><a href="#">Conteúdo destacado</a></li>
+                    <li><a href="#">Eventos atuais</a></li>
+                    <li><a href="#">Esplanada</a></li>
+                    <li><a href="#">Página aleatória</a></li>
+                    <li><a href="#">Portais temáticos</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-block">
+                <h3 class="sidebar-title">Colaboração</h3>
+                <ul class="sidebar-list">
+                    <li><a href="#">Boas-vindas</a></li>
+                    <li><a href="#">Ajuda</a></li>
+                    <li><a href="#">Página de testes</a></li>
+                    <li><a href="#">Portal comunitário</a></li>
+                    <li><a href="#">Mudanças recentes</a></li>
+                    <li><a href="#">Fazer uma doação</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-block">
+                <h3 class="sidebar-title">Ferramentas</h3>
+                <ul class="sidebar-list">
+                    <li><a href="#">Páginas afluentes</a></li>
+                    <li><a href="#">Alterações relacionadas</a></li>
+                    <li><a href="#">Carregar ficheiro</a></li>
+                    <li><a href="#">Páginas especiais</a></li>
+                    <li><a href="#">Hiperligação permanente</a></li>
+                    <li><a href="#">Informações da página</a></li>
+                    <li><a href="#">Citar esta página</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-block">
+                <h3 class="sidebar-title">Noutros idiomas</h3>
+                <ul class="sidebar-list lang-list">
+                    <li><a href="#" hreflang="ja">日本語</a></li>
+                    <li><a href="#" hreflang="en">English</a></li>
+                    <li><a href="#" hreflang="es">Español</a></li>
+                    <li><a href="#" hreflang="fr">Français</a></li>
+                    <li><a href="#" hreflang="de">Deutsch</a></li>
+                    <li><a href="#" hreflang="it">Italiano</a></li>
+                    <li><a href="#" class="more-langs">Mais 54 idiomas</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- ====================================================
+             3.2 ÁREA PRINCIPAL DO ARTIGO (MAIN CONTENT)
+             ==================================================== -->
+        <main id="content" class="wiki-main" role="main">
+
+            <!-- Título do artigo -->
+            <header class="article-header">
+                <h1 id="firstHeading" class="firstHeading">Dragon Ball Z</h1>
+                <div class="article-subheading">Origem: Wikipédia, a enciclopédia livre.</div>
+            </header>
+
+            <!-- Aviso de desambiguação (Hatnote) -->
+            <div class="hatnote" role="note">
+                <span>Nota: Para a franquia geral criada por Akira Toriyama, veja <a href="#">Dragon Ball</a>. Para a primeira série de animação, veja <a href="#">Dragon Ball (anime)</a>.</span>
+            </div>
+
+            <article class="article-content">
+
+                <!-- ====================================================
+                     3.3 INFOBOX LATERAL (FICHA TÉCNICA DO ANIME)
+                     Elemento clássico da Wikipédia com dados tabulados
+                     ==================================================== -->
+                <aside class="infobox" aria-label="Ficha técnica de Dragon Ball Z">
+                    <div class="infobox-title">
+                        <em>Dragon Ball Z</em><br>
+                        <span class="japanese-title">ドラゴンボールZ</span>
+                    </div>
+
+                    <!-- Imagem / Arte representativa em SVG com Esfera de 4 estrelas -->
+                    <figure class="infobox-image">
+                        <div class="dbz-badge-container">
+                            <svg viewBox="0 0 280 170" width="100%" height="auto" class="dbz-vector-art" role="img" aria-label="Logotipo ilustrado de Dragon Ball Z">
+                                <defs>
+                                    <linearGradient id="dbzGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#ff7f00"/>
+                                        <stop offset="50%" stop-color="#ffb700"/>
+                                        <stop offset="100%" stop-color="#ff4500"/>
+                                    </linearGradient>
+                                    <linearGradient id="ballGrad" x1="20%" y1="20%" x2="80%" y2="80%">
+                                        <stop offset="0%" stop-color="#ffe259"/>
+                                        <stop offset="100%" stop-color="#ffa751"/>
+                                    </linearGradient>
+                                    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+                                        <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.3"/>
+                                    </filter>
+                                </defs>
+                                <!-- Fundo decorativo -->
+                                <rect width="280" height="170" fill="#1b2838" rx="6"/>
+                                <!-- Esfera do dragão de 4 estrelas -->
+                                <circle cx="140" cy="65" r="40" fill="url(#ballGrad)" filter="url(#shadow)"/>
+                                <circle cx="128" cy="53" r="10" fill="#ffffff" opacity="0.45"/>
+                                <!-- 4 Estrelas vermelhas -->
+                                <polygon points="140,43 142,49 148,49 143,53 145,59 140,55 135,59 137,53 132,49 138,49" fill="#d31010"/>
+                                <polygon points="140,73 142,79 148,79 143,83 145,89 140,85 135,89 137,83 132,79 138,79" fill="#d31010"/>
+                                <polygon points="123,58 125,64 131,64 126,68 128,74 123,70 118,74 120,68 115,64 121,64" fill="#d31010"/>
+                                <polygon points="157,58 159,64 165,64 160,68 162,74 157,70 152,74 154,68 149,64 155,64" fill="#d31010"/>
+                                <!-- Título Dragon Ball Z -->
+                                <text x="140" y="128" font-family="'Impact', 'Arial Black', sans-serif" font-size="28" text-anchor="middle" fill="url(#dbzGrad)" stroke="#111" stroke-width="1.5" letter-spacing="1">DRAGON BALL</text>
+                                <text x="140" y="160" font-family="'Impact', 'Arial Black', sans-serif" font-size="34" text-anchor="middle" fill="#d31010" stroke="#fff" stroke-width="1.2">Z</text>
+                            </svg>
+                        </div>
+                        <figcaption>Arte comemorativa da série e a icônica Esfera de Quatro Estrelas (四星球, Sūshinchū).</figcaption>
+                    </figure>
+
+                    <!-- Tabela de especificações técnicas -->
+                    <table class="infobox-data">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Gênero</th>
+                                <td><a href="#">Ação</a>, <a href="#">Aventura</a>, <a href="#">Artes marciais</a>, <a href="#">Fantasia científica</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Formato</th>
+                                <td>Série de anime para televisão</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Autor original</th>
+                                <td><a href="#producao">Akira Toriyama</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Direção</th>
+                                <td>Daisuke Nishio<br>Shigeyasu Yamauchi</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Roteiro</th>
+                                <td>Takao Koyama</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Música</th>
+                                <td>Shunsuke Kikuchi</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Estúdio</th>
+                                <td><a href="#">Toei Animation</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Emissora original</th>
+                                <td><a href="#">Fuji TV</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Emissoras no Brasil</th>
+                                <td><a href="#">Rede Bandeirantes</a><br><a href="#">Rede Globo</a><br><a href="#">Cartoon Network</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Período de exibição</th>
+                                <td>26 de abril de 1989 – 31 de janeiro de 1996</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Episódios</th>
+                                <td><strong>291</strong> (<a href="#sagas">Lista de episódios</a>)</td>
+                            </tr>
+                            <tr class="infobox-header-row">
+                                <th colspan="2">Cronologia</th>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="infobox-timeline">
+                                    <div class="timeline-row">
+                                        <span class="timeline-prev">◄ <em><a href="#">Dragon Ball</a></em></span>
+                                        <span class="timeline-next"><em><a href="#">Dragon Ball GT</a></em> / <em><a href="#">Super</a></em> ►</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </aside>
+
+                <!-- ====================================================
+                     3.4 INTRODUÇÃO (LEAD PARAGRAPHS)
+                     ==================================================== -->
+                <p>
+                    <dfn><strong>Dragon Ball Z</strong></dfn> (japonês: ドラゴンボール<abbr title="Zetto">Z</abbr>, Hepburn: <em>Doragon Bōru Zetto</em>, frequentemente abreviado como <strong>DBZ</strong>) é uma influente série de animação japonesa (<em>anime</em>) produzida pelo estúdio <a href="#">Toei Animation</a>.<sup class="reference" id="ref-cite-1"><a href="#cite-note-1">[1]</a></sup> Baseada nos capítulos 195 a 519 do aclamado mangá <em>Dragon Ball</em>, escrito e ilustrado por <a href="#producao">Akira Toriyama</a>, a série foi originalmente transmitida no Japão pela emissora <a href="#">Fuji TV</a> entre 26 de abril de 1989 e 31 de janeiro de 1996, totalizando 291 episódios.<sup class="reference" id="ref-cite-2"><a href="#cite-note-2">[2]</a></sup>
+                </p>
+
+                <p>
+                    A narrativa acompanha a vida adulta de <strong>Son Goku</strong> enquanto ele e seus companheiros — conhecidos como os <em>Guerreiros Z</em> — defendem a Terra contra uma sucessão de poderosos antagonistas intergalácticos, androides biomecânicos e seres mágicos ancestrais. Ao longo da trajetória, Goku descobre suas origens extraterrestres como membro da raça guerreira dos <a href="#sagas-saiyajins">Saiyajins</a>, alcança transformações lendárias como o <em>Super Saiyajin</em> e forma alianças improváveis com antigos rivais, em especial o príncipe guerreiro <strong>Vegeta</strong>.<sup class="reference" id="ref-cite-3"><a href="#cite-note-3">[3]</a></sup>
+                </p>
+
+                <p>
+                    Amplamente considerado um dos maiores fenômenos da cultura pop global e um dos pilares do subgênero <em>shōnen</em> moderno, <em>Dragon Ball Z</em> alcançou enorme sucesso no Ocidente durante o final dos anos 1990 e início dos anos 2000. No Brasil, o anime marcou gerações através de suas transmissões pela <a href="#">Band</a> e pelo bloco matinal <em>TV Globinho</em> da <a href="#">Rede Globo</a>, estabelecendo parâmetros para a popularização dos animes na televisão aberta da América Latina.<sup class="reference" id="ref-cite-4"><a href="#cite-note-4">[4]</a></sup>
+                </p>
+
+                <!-- ====================================================
+                     3.5 SUMÁRIO / ÍNDICE (TABLE OF CONTENTS - TOC)
+                     ==================================================== -->
+                <nav id="toc" class="toc" aria-labelledby="toc-heading">
+                    <div class="toc-header">
+                        <h2 id="toc-heading">Sumário</h2>
+                        <span class="toc-toggle">[<a href="#toc" class="toc-toggle-link">ocultar</a>]</span>
+                    </div>
+                    <ol class="toc-list">
+                        <li class="toc-item"><a href="#sinopse"><span class="toc-number">1</span> <span class="toc-text">Sinopse</span></a></li>
+                        <li class="toc-item">
+                            <a href="#sagas"><span class="toc-number">2</span> <span class="toc-text">Arcos narrativos (Sagas)</span></a>
+                            <ol class="toc-sublist">
+                                <li class="toc-item"><a href="#sagas-saiyajins"><span class="toc-number">2.1</span> <span class="toc-text">Saga dos Saiyajins</span></a></li>
+                                <li class="toc-item"><a href="#sagas-freeza"><span class="toc-number">2.2</span> <span class="toc-text">Saga de Freeza</span></a></li>
+                                <li class="toc-item"><a href="#sagas-cell"><span class="toc-number">2.3</span> <span class="toc-text">Saga dos Androides e Cell</span></a></li>
+                                <li class="toc-item"><a href="#sagas-boo"><span class="toc-number">2.4</span> <span class="toc-text">Saga de Majin Boo</span></a></li>
+                            </ol>
+                        </li>
+                        <li class="toc-item"><a href="#personagens"><span class="toc-number">3</span> <span class="toc-text">Personagens principais</span></a></li>
+                        <li class="toc-item"><a href="#producao"><span class="toc-number">4</span> <span class="toc-text">Produção e desenvolvimento</span></a></li>
+                        <li class="toc-item"><a href="#impacto"><span class="toc-number">5</span> <span class="toc-text">Impacto cultural e legado</span></a></li>
+                        <li class="toc-item"><a href="#midias"><span class="toc-number">6</span> <span class="toc-text">Filmes e outras mídias</span></a></li>
+                        <li class="toc-item"><a href="#ver-tambem"><span class="toc-number">7</span> <span class="toc-text">Ver também</span></a></li>
+                        <li class="toc-item"><a href="#referencias"><span class="toc-number">8</span> <span class="toc-text">Referências</span></a></li>
+                        <li class="toc-item"><a href="#ligacoes-externas"><span class="toc-number">9</span> <span class="toc-text">Ligações externas</span></a></li>
+                    </ol>
+                </nav>
+
+                <!-- ====================================================
+                     3.6 SEÇÃO 1: SINOPSE
+                     ==================================================== -->
+                <section id="sinopse" class="wiki-section">
+                    <h2><span class="mw-headline">1 Sinopse</span></h2>
+                    <p>
+                        Cinco anos após vencer Piccolo Jr. no 23º Torneio de Artes Marciais, Goku vive pacificamente nas montanhas com sua esposa Chi-Chi e seu filho pequeno, Gohan. A tranquilidade é rompida pela chegada inesperada de Raditz, um guerreiro alienígena que revela ser irmão biológico mais velho de Goku. Raditz informa que ambos pertencem aos <strong>Saiyajins</strong>, uma raça quase extinta de guerreiros mercenários espaciais, e que o verdadeiro nome de nascimento de Goku é <em>Kakarotto</em>.
+                    </p>
+                    <p>
+                        Após recusar aliar-se a Raditz para aniquilar os terráqueos, Goku une forças com seu arquirrival Piccolo. Em uma batalha desesperada, Goku sacrifica a própria vida para deter Raditz, descobrindo antes de morrer que outros dois Saiyajins ainda mais formidáveis — Nappa e o príncipe Vegeta — estão a caminho da Terra em busca das místicas Esferas do Dragão.
+                    </p>
+                    <p>
+                        No Outro Mundo, Goku percorre o Caminho da Serpente para treinar com o Senhor Kaioh, dominando técnicas lendárias como o <em>Kaioh-ken</em> e a <em>Genki Dama</em>, enquanto seus amigos na Terra se preparam para a iminente invasão, inaugurando uma série de batalhas cósmicas com o destino de múltiplos mundos em jogo.
+                    </p>
+                </section>
+
+                <!-- ====================================================
+                     3.7 SEÇÃO 2: ARCOS NARRATIVOS (SAGAS)
+                     Apresenta tabela comparativa (wikitable) e subseções
+                     ==================================================== -->
+                <section id="sagas" class="wiki-section">
+                    <h2><span class="mw-headline">2 Arcos narrativos (Sagas)</span></h2>
+                    <p>
+                        Os 291 episódios de <em>Dragon Ball Z</em> são estruturalmente divididos em quatro arcos principais de grande escala, cada qual centrado em um conjunto distinto de desafios, evoluções de poder e antagonistas centrais:
+                    </p>
+
+                    <!-- TABELA COMPARATIVA ESTILO WIKIPEDIA (wikitable) -->
+                    <table class="wikitable">
+                        <caption>Visão geral dos arcos canônicos de <em>Dragon Ball Z</em></caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Arco / Saga</th>
+                                <th scope="col">Episódios</th>
+                                <th scope="col">Período de Transmissão</th>
+                                <th scope="col">Antagonista(s) Central(is)</th>
+                                <th scope="col">Acontecimento Marcante</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><a href="#sagas-saiyajins">Saga dos Saiyajins</a></th>
+                                <td>001 – 035 (35 eps)</td>
+                                <td>1989 – 1990</td>
+                                <td>Raditz, Nappa e Vegeta</td>
+                                <td>Revelação da linhagem Saiyajin de Goku e primeiro duelo contra Vegeta.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><a href="#sagas-freeza">Saga de Freeza</a></th>
+                                <td>036 – 107 (72 eps)</td>
+                                <td>1990 – 1991</td>
+                                <td>Forças Especiais Ginyu e Freeza</td>
+                                <td>Viagem a Namekusei e o despertar do lendário <em>Super Saiyajin</em>.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><a href="#sagas-cell">Saga dos Androides e Cell</a></th>
+                                <td>118 – 194 (77 eps)</td>
+                                <td>1991 – 1993</td>
+                                <td>Androides 17 e 18, Cell</td>
+                                <td>Aviso de Trunks do Futuro e o despertar do <em>Super Saiyajin 2</em> por Gohan.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><a href="#sagas-boo">Saga de Majin Boo</a></th>
+                                <td>195 – 291 (97 eps)</td>
+                                <td>1993 – 1996</td>
+                                <td>Mago Babidi, Dábura e Majin Boo</td>
+                                <td>Fusões (Gotenks e Vegetto), Super Saiyajin 3 e destruição da Terra.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Subseção 2.1 -->
+                    <div id="sagas-saiyajins" class="wiki-subsection">
+                        <h3><span class="mw-headline">2.1 Saga dos Saiyajins</span></h3>
+                        <p>
+                            Após a chegada devastadora de Nappa e Vegeta, a maior parte dos defensores da Terra — incluindo Yamcha, Chaos, Tenshinhan e Piccolo — perece em combate. Com a morte de Piccolo, as Esferas do Dragão da Terra deixam de existir temporariamente. Goku chega a tempo e derrota Nappa com extrema facilidade, desencadeando um lendário confronto direto contra o Príncipe dos Saiyajins no deserto rochoso.
+                        </p>
+                    </div>
+
+                    <!-- Subseção 2.2 -->
+                    <div id="sagas-freeza" class="wiki-subsection">
+                        <h3><span class="mw-headline">2.2 Saga de Freeza</span></h3>
+                        <p>
+                            Gohan, Kuririn e Bulma partem para o planeta natal de Piccolo, Namekusei, com a esperança de utilizar as Esferas do Dragão originais para ressuscitar seus companheiros. No local, enfrentam o tirano cósmico <strong>Freeza</strong> e suas tropas de elite. O clímax ocorre no devastado planeta Namekusei, onde, impelido pela fúria ao testemunhar o assassinato de Kuririn, Goku atinge o lendário estado de <mark class="wiki-highlight">Super Saiyajin</mark>, derrotando Freeza antes do planeta explodir.
+                        </p>
+                    </div>
+
+                    <!-- Subseção 2.3 -->
+                    <div id="sagas-cell" class="wiki-subsection">
+                        <h3><span class="mw-headline">2.3 Saga dos Androides e Cell</span></h3>
+                        <p>
+                            Um misterioso jovem guerreiro vindo do futuro, <strong>Trunks</strong>, surge e destrói Freeza reconstruído ciberneticamente. Ele alerta que em três anos dois androides mortíferos criados pelo Dr. Gero da Força Red Ribbon dizimarão o planeta. Durante a crise, surge <strong>Cell</strong>, uma bioforma sintética do futuro que absorve os Androides 17 e 18 para alcançar sua forma perfeita. O conflito culmina nos <em>Jogos de Cell</em>, nos quais Son Gohan desperta o poder oculto do Super Saiyajin 2 para derrotá-lo em um confronto icônico de Kamehameha pai-filho.
+                        </p>
+                    </div>
+
+                    <!-- Subseção 2.4 -->
+                    <div id="sagas-boo" class="wiki-subsection">
+                        <h3><span class="mw-headline">2.4 Saga de Majin Boo</span></h3>
+                        <p>
+                            Sete anos após os Jogos de Cell, a Terra vive em relativa paz enquanto Gohan frequenta o ensino médio. No entanto, o feiticeiro Babidi liberta <strong>Majin Boo</strong>, um ser demoníaco cor-de-rosa capaz de transformar pessoas em doces e de regenerar qualquer ferimento. A batalha escala para proporções míticas, introduzindo conceitos como a <em>Dança da Fusão</em> (gerando Gotenks), a fusão por <em>Brincos Potara</em> (gerando Vegetto) e a transformação de Goku em <em>Super Saiyajin 3</em>.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- ====================================================
+                     3.8 SEÇÃO 3: PERSONAGENS PRINCIPAIS
+                     ==================================================== -->
+                <section id="personagens" class="wiki-section">
+                    <h2><span class="mw-headline">3 Personagens principais</span></h2>
+                    <p>
+                        A série conta com um vasto elenco de guerreiros e coadjuvantes, agrupados principalmente entre os protetores da Terra e seus adversários:
+                    </p>
+
+                    <div class="character-columns">
+                        <div class="character-card">
+                            <h4>Guerreiros Z</h4>
+                            <ul>
+                                <li><strong>Son Goku (Kakarotto):</strong> O protagonista bondoso e destemido que busca constantemente superar seus próprios limites físicos e marciais.</li>
+                                <li><strong>Vegeta:</strong> Príncipe altivo e orgulhoso dos Saiyajins. Inicialmente antagonista implacável, passa a rival de Goku e protetor de sua família na Terra.</li>
+                                <li><strong>Son Gohan:</strong> Primogênito de Goku, que possui potencial bélico colossal, despertado principalmente em momentos de extrema emoção.</li>
+                                <li><strong>Piccolo:</strong> Guerreiro namekuseijin inteligente e estrategista, que se torna tutor rigoroso e mentor afetuoso de Gohan.</li>
+                                <li><strong>Trunks do Futuro:</strong> Filho de Vegeta e Bulma que viajou no tempo para salvar a linha temporal do presente da destruição androide.</li>
+                                <li><strong>Kuririn:</strong> O mais forte e leal humano entre os defensores da Terra, amigo de infância inseparável de Goku.</li>
+                            </ul>
+                        </div>
+
+                        <div class="character-card">
+                            <h4>Antagonistas Notáveis</h4>
+                            <ul>
+                                <li><strong>Raditz & Nappa:</strong> Guerreiros Saiyajins remanescentes que invadem o planeta Terra no início da fase Z.</li>
+                                <li><strong>Freeza:</strong> Imperador intergaláctico implacável responsável pela destruição do Planeta Vegeta e do povo Saiyajin.</li>
+                                <li><strong>Cell:</strong> Criatura biológica perfeita construída a partir do DNA dos guerreiros mais poderosos do universo.</li>
+                                <li><strong>Majin Boo:</strong> Entidade ancestral mágica imprevisível, cuja personalidade oscila entre a inocência infantil e a malevolência pura.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ====================================================
+                     3.9 SEÇÃO 4: PRODUÇÃO E DESENVOLVIMENTO
+                     ==================================================== -->
+                <section id="producao" class="wiki-section">
+                    <h2><span class="mw-headline">4 Produção e desenvolvimento</span></h2>
+                    <p>
+                        Quando a série original de animação de <em>Dragon Ball</em> começou a se aproximar dos capítulos de maior maturidade do mangá, a equipe da <a href="#">Toei Animation</a> optou por reiniciar a identidade visual da produção televisiva. O próprio autor do mangá, <strong>Akira Toriyama</strong>, sugeriu a inclusão da letra "Z" ao final do título. Segundo Toriyama em entrevistas posteriores, o "Z" — sendo a última letra do alfabeto latino — expressava seu desejo de que a série finalmente chegasse a uma conclusão definitiva, uma vez que sentia cansaço com a produção contínua de ideias.<sup class="reference" id="ref-cite-3"><a href="#cite-note-3">[3]</a></sup>
+                    </p>
+
+                    <!-- Citação em bloco (Pullquote / Blockquote) -->
+                    <blockquote class="wiki-quote">
+                        <p>
+                            "Z é a última letra do alfabeto, certo? De qualquer modo, a partir daquele ponto, eu realmente queria colocar um ponto final na história do mangá, então escolhi 'Z' para significar: 'É isso, pessoal! Este é o fim!'"
+                        </p>
+                        <cite>— Akira Toriyama, na entrevista contida no livro oficial <em>Daizenshuu 10</em>.</cite>
+                    </blockquote>
+
+                    <p>
+                        A trilha sonora original foi composta pelo maestro <strong>Shunsuke Kikuchi</strong>, cujos temas instrumentais marcantes se tornaram indissociáveis dos momentos de tensão e drama. As aberturas, em particular <em>"Cha-La Head-Cha-La"</em> (interpretada por Hironobu Kageyama para os episódios 1–199) e <em>"We Gotta Power"</em> (episódios 200–291), tornaram-se hinos reverenciados na história da música de animes.
+                    </p>
+                </section>
+
+                <!-- ====================================================
+                     3.10 SEÇÃO 5: IMPACTO CULTURAL E LEGADO
+                     ==================================================== -->
+                <section id="impacto" class="wiki-section">
+                    <h2><span class="mw-headline">5 Impacto cultural e legado</span></h2>
+                    <p>
+                        <em>Dragon Ball Z</em> é apontado por pesquisadores e historiadores de animação como um catalisador fundamental da globalização do anime nos anos 1990. A estrutura de combate da série, a progressão escalonar de níveis de poder (conhecida coloquialmente como <em>powerscaling</em>) e os conceitos visuais do cabelo dourado do Super Saiyajin influenciaram diretamente autores de gerações posteriores, incluindo <strong>Eiichiro Oda</strong> (<em>One Piece</em>), <strong>Masashi Kishimoto</strong> (<em>Naruto</em>) e <strong>Tite Kubo</strong> (<em>Bleach</em>).<sup class="reference" id="ref-cite-4"><a href="#cite-note-4">[4]</a></sup>
+                    </p>
+                    <p>
+                        Na cultura da internet, momentos do anime deram origem a memes duradouros da cultura digital ocidental, com destaque para a frase <em>"It's over 9000!"</em> (na dublagem brasileira traduzida fielmente como <em>"É de mais de oito mil!"</em>) dita por Vegeta durante a leitura do scouter do poder de Goku.
+                    </p>
+                </section>
+
+                <!-- ====================================================
+                     3.11 SEÇÃO 6: FILMES E OUTRAS MÍDIAS
+                     ==================================================== -->
+                <section id="midias" class="wiki-section">
+                    <h2><span class="mw-headline">6 Filmes e outras mídias</span></h2>
+                    <p>
+                        O universo de <em>Dragon Ball Z</em> gerou uma vasta franquia multimídia:
+                    </p>
+                    <ul>
+                        <li><strong>Longas-metragens para cinema:</strong> Quinze filmes originais foram produzidos durante a exibição original, introduzindo personagens cultuados como <em>Cooler</em>, <em>Broly</em>, <em>Bojack</em> e <em>Janemba</em>. Em 2013 e 2015, foram lançados os aclamados <em>A Batalha dos Deuses</em> e <em>O Renascimento de 'F'</em>, que serviram de prelúdio para a série sucessora <em>Dragon Ball Super</em>.</li>
+                        <li><strong>Especiais de televisão:</strong> Produções focadas em histórias secundárias como <em>Bardock: O Pai de Goku</em> (1990) e <em>Gohan e Trunks: Guerreiros do Futuro</em> (1993).</li>
+                        <li><strong>Jogos eletrônicos:</strong> Centenas de adaptações para consoles, destacando-se séries consagradas como <em>Budokai Tenkaichi</em>, <em>Dragon Ball FighterZ</em> e o RPG de ação <em>Dragon Ball Z: Kakarot</em>.</li>
+                    </ul>
+                </section>
+
+                <!-- ====================================================
+                     3.12 SEÇÃO 7: VER TAMBÉM
+                     ==================================================== -->
+                <section id="ver-tambem" class="wiki-section">
+                    <h2><span class="mw-headline">7 Ver também</span></h2>
+                    <ul class="wiki-bullet-list">
+                        <li><a href="#">Akira Toriyama</a></li>
+                        <li><a href="#">Toei Animation</a></li>
+                        <li><a href="#">Dragon Ball (mangá)</a></li>
+                        <li><a href="#">Dragon Ball Super</a></li>
+                        <li><a href="#">Lista de episódios de Dragon Ball Z</a></li>
+                    </ul>
+                </section>
+
+                <!-- ====================================================
+                     3.13 SEÇÃO 8: REFERÊNCIAS (NOTAS DE RODAPÉ)
+                     ==================================================== -->
+                <section id="referencias" class="wiki-section">
+                    <h2><span class="mw-headline">8 Referências</span></h2>
+                    <ol class="references">
+                        <li id="cite-note-1">
+                            <span class="mw-cite-backlink"><a href="#ref-cite-1">↑</a></span>
+                            <span class="reference-text">Toei Animation. <a href="#" rel="nofollow">"Dragon Ball Z Official Catalogue & Archive"</a> (em inglês). Arquivado do original em 15 de janeiro de 2020. Consultado em 10 de novembro de 2026.</span>
+                        </li>
+                        <li id="cite-note-2">
+                            <span class="mw-cite-backlink"><a href="#ref-cite-2">↑</a></span>
+                            <span class="reference-text">Fuji TV. <a href="#" rel="nofollow">"Dragon Ball Z Broadcast Historical Data (1989-1996)"</a> (em japonês). Shueisha / Toei Animation. Consultado em 10 de novembro de 2026.</span>
+                        </li>
+                        <li id="cite-note-3">
+                            <span class="mw-cite-backlink"><a href="#ref-cite-3">↑</a></span>
+                            <span class="reference-text">Toriyama, Akira (1996). <em>Dragon Ball Daizenshuu: TV Animation Part 1</em> (em japonês). Tóquio: Shueisha. ISBN 4-08-782753-2.</span>
+                        </li>
+                        <li id="cite-note-4">
+                            <span class="mw-cite-backlink"><a href="#ref-cite-4">↑</a></span>
+                            <span class="reference-text">Clements, Jonathan; McCarthy, Helen (2015). <em>The Anime Encyclopedia, 3rd Revised Edition: A Century of Japanese Animation</em>. [S.l.]: Stone Bridge Press. ISBN 978-1611720181.</span>
+                        </li>
+                    </ol>
+                </section>
+
+                <!-- ====================================================
+                     3.14 SEÇÃO 9: LIGAÇÕES EXTERNAS
+                     ==================================================== -->
+                <section id="ligacoes-externas" class="wiki-section">
+                    <h2><span class="mw-headline">9 Ligações externas</span></h2>
+                    <ul class="wiki-bullet-list">
+                        <li><a href="#" rel="nofollow">Página oficial de Dragon Ball no portal da Toei Animation</a> (em japonês)</li>
+                        <li><a href="#" rel="nofollow">Dragon Ball Official Site (Portal Global Multilíngue)</a></li>
+                        <li><a href="#" rel="nofollow">Dragon Ball Z na enciclopédia do Anime News Network</a> (em inglês)</li>
+                    </ul>
+                </section>
+
+                <!-- ====================================================
+                     3.15 CAIXA DE CATEGORIAS (CATLINKS)
+                     ==================================================== -->
+                <div class="catlinks" id="catlinks" role="navigation" aria-label="Categorias">
+                    <div class="mw-normal-catlinks">
+                        <a href="#categorias" title="Especial:Categorias">Categorias</a>:
+                        <ul class="categories-list">
+                            <li><a href="#">Séries de televisão de Dragon Ball</a></li>
+                            <li><a href="#">Animes de 1989</a></li>
+                            <li><a href="#">Animes transmitidos pela Fuji TV</a></li>
+                            <li><a href="#">Séries da Toei Animation</a></li>
+                            <li><a href="#">Animes de artes marciais</a></li>
+                            <li><a href="#">Ficção científica no Japão</a></li>
+                            <li><a href="#">Obras de Akira Toriyama</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </article>
+        </main>
+    </div>
+
+    <!-- ========================================================
+         4. RODAPÉ INFERIOR (WIKIPEDIA FOOTER)
+         ======================================================== -->
+    <footer class="wiki-footer" role="contentinfo">
+        <div class="footer-container">
+            <p class="footer-info">
+                Esta página foi editada pela última vez às 00:20 de 11 de novembro de 2026.<br>
+                Este texto é disponibilizado nos termos da licença <a href="#">Atribuição-CompartilhaIgual 4.0 Internacional (CC BY-SA 4.0) da Creative Commons</a>; pode estar sujeito a condições adicionais. Para mais detalhes, consulte as <a href="#">condições de utilização</a>.
+            </p>
+            <ul class="footer-places">
+                <li><a href="#">Política de privacidade</a></li>
+                <li><a href="#">Sobre a Wikipédia</a></li>
+                <li><a href="#">Avisos gerais</a></li>
+                <li><a href="#">Código de conduta</a></li>
+                <li><a href="#">Programadores</a></li>
+                <li><a href="#">Estatísticas</a></li>
+                <li><a href="#">Declaração sobre cookies</a></li>
+                <li><a href="#">Versão móvel</a></li>
+            </ul>
+            <div class="footer-icons">
+                <span class="footer-badge">Wikimedia Foundation</span>
+                <span class="footer-badge">Powered by MediaWiki</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
