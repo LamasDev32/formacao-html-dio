@@ -1,0 +1,315 @@
+:root {
+    color-scheme: light;
+    font-family: Inter, "Segoe UI", sans-serif;
+    color: #172a3a;
+    background: #f3f6f8;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    --color-ink: #172a3a;
+    --color-muted: #6c7d8b;
+    --color-accent: #1bb89a;
+    --color-accent-dark: #118b76;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    background:
+        radial-gradient(ellipse at 85% 4%, rgb(27 184 154 / 10%), transparent 28rem),
+        #f3f6f8;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+figure {
+    margin: 0;
+
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1.35rem clamp(1.25rem, 6vw, 6rem);
+    color: #fff;
+    background: #142a3a;
+    box-shadow: 0 8px 24px rgb(20 42 58 / 12%);
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 750;
+    letter-spacing: -0.035em;
+}
+
+header h1::before {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 0.25rem;
+    background: var(--color-accent);
+    box-shadow: 0 0 0 5px rgb(27 184 154 / 15%);
+    content: "";
+}
+
+.menu-principal ul,
+.menu-lateral ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-principal ul {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.5rem, 3vw, 2.25rem);
+}
+
+.menu-principal a {
+    display: inline-block;
+    padding: 0.6rem 0;
+    color: rgb(255 255 255 / 72%);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 160ms ease;
+}
+
+.menu-principal a:hover,
+.menu-principal a:focus-visible {
+    color: #75e2cd;
+}
+
+main {
+    display: grid;
+    grid-template-columns: minmax(210px, 250px) minmax(0, 1fr);
+    align-items: start;
+    gap: 1.5rem;
+    width: min(1180px, calc(100% - 3rem));
+    margin: clamp(2rem, 6vw, 4.5rem) auto 2rem;
+}
+
+.section-lateral aside,
+main > section:not(.section-lateral) {
+    border: 1px solid #e4eaee;
+    border-radius: 1.25rem;
+    background: #fff;
+    box-shadow: 0 16px 40px rgb(34 57 73 / 6%);
+}
+
+.section-lateral {
+    position: sticky;
+    top: 1.5rem;
+}
+
+.section-lateral aside {
+    padding: 1.25rem;
+}
+
+.menu-lateral::before {
+    display: block;
+    margin: 0.25rem 0.75rem 1rem;
+    color: #9aa8b2;
+    content: "BIBLIOTECA";
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+}
+
+.menu-lateral li + li {
+    margin-top: 0.25rem;
+}
+
+.menu-lateral a {
+    display: flex;
+    align-items: center;
+    min-height: 2.8rem;
+    padding: 0.65rem 0.75rem;
+    border-radius: 0.7rem;
+    color: #526575;
+    font-size: 0.92rem;
+    font-weight: 600;
+    transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.menu-lateral a::before {
+    width: 0.4rem;
+    height: 0.4rem;
+    margin-right: 0.75rem;
+    border-radius: 50%;
+    background: #c4d0d7;
+    content: "";
+    transition: background-color 160ms ease;
+}
+
+.menu-lateral a:hover,
+.menu-lateral a:focus-visible {
+    transform: translateX(2px);
+    color: var(--color-accent-dark);
+    background: #eaf8f5;
+}
+
+.menu-lateral a:hover::before,
+.menu-lateral a:focus-visible::before {
+    background: var(--color-accent);
+}
+
+main > section:not(.section-lateral) {
+    min-height: 480px;
+    overflow: hidden;
+    padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.text h2 {
+    max-width: 18ch;
+    margin: 0;
+    color: var(--color-ink);
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+    font-weight: 750;
+    letter-spacing: -0.055em;
+    line-height: 1.12;
+}
+
+.text h2::after {
+    display: block;
+    width: 3.25rem;
+    height: 0.25rem;
+    margin-top: 1.2rem;
+    border-radius: 1rem;
+    background: var(--color-accent);
+    content: "";
+}
+
+.images-section {
+    margin-top: 2rem;
+}
+
+.images-section figure {
+    position: relative;
+    display: grid;
+    min-height: 270px;
+    margin: 0;
+    overflow: hidden;
+    place-items: center;
+    border-radius: 1rem;
+    background:
+        radial-gradient(ellipse at 70% 35%, rgb(255 255 255 / 55%), transparent 27%),
+        radial-gradient(ellipse at 25% 80%, rgb(27 184 154 / 45%), transparent 35%),
+        linear-gradient(135deg, #d9f4ed, #e5eef5 55%, #cbdce8);
+}
+
+.images-section figure::before {
+    position: absolute;
+    width: 12rem;
+    height: 12rem;
+    border: 1px solid rgb(255 255 255 / 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 2.5rem rgb(255 255 255 / 18%), 0 0 0 5rem rgb(255 255 255 / 12%);
+    content: "";
+}
+
+.images-section figure::after {
+    position: relative;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgb(255 255 255 / 80%);
+    border-radius: 0.75rem;
+    color: #38556a;
+    background: rgb(255 255 255 / 68%);
+    box-shadow: 0 8px 24px rgb(23 42 58 / 8%);
+    font-size: 0.88rem;
+    font-weight: 650;
+    backdrop-filter: blur(8px);
+}
+
+footer {
+    display: flex;
+    grid-column: 1 / -1;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 1.25rem;
+    color: var(--color-muted);
+    font-size: 0.82rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 680px) {
+    header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1.25rem;
+    }
+
+    .menu-principal {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .menu-principal ul {
+        width: max-content;
+        gap: 1.5rem;
+    }
+
+    main {
+        grid-template-columns: minmax(0, 1fr);
+        width: min(100% - 2rem, 560px);
+        margin-top: 1.5rem;
+    }
+
+    .section-lateral {
+        position: static;
+    }
+
+    .section-lateral aside {
+        padding: 1rem;
+    }
+
+    .menu-lateral ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.25rem;
+    }
+
+    .menu-lateral li + li {
+        margin-top: 0;
+    }
+
+    main > section:not(.section-lateral) {
+        min-height: 360px;
+        padding: 1.5rem;
+    }
+
+    .images-section figure {
+        min-height: 210px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
